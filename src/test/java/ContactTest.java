@@ -7,41 +7,32 @@ public class ContactTest extends BaseTest {
 
     private String accountName = "BBBBB";
     private String tabName = "Contacts";
-    private Account account = new Account(accountName,
-            "",
-            "Analyst",
-            "",
-            "",
-            "Banking",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "");
 
-    private Contact contact = new Contact(accountName,
-            "Mr.",
-            "FName",
-            "MName",
-            "suffix",
-            accountName,
-            "100-200",
-            "nastyana@gmail.com",
-            "shipping address text",
-            "billingCity",
-            "billingZip",
-            "billingState",
-            "billingCountry",
-            "shippingCity",
-            "shippingZip",
-            "shippingState",
-            "shippingCpuntry");
+    private Account account = Account.builder()
+            .accountName(accountName)
+            .type("Analyst")
+            .industry("Banking")
+            .build();
+
+    private Contact contact = Contact.builder()
+            .lastName(accountName)
+            .salutation("Mr.")
+            .firstName("FName")
+            .middleName("MName")
+            .suffix("suffix")
+            .accountName(accountName)
+            .title("sss")
+            .eMail("nastyana@gmail.com")
+            .phone("4445555666")
+            .mobilePhone("123456678")
+            .department("11123dc")
+            .fax("12312312312")
+            .mailingCountry("mailingCountry")
+            .mailingState("mailingState")
+            .mailingCity("mailingCity")
+            .mailingStreet("mailingStreet")
+            .mailingZip("mailingZip")
+            .build();
 
     @BeforeMethod
     public void preRequisites() {

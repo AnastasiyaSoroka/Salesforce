@@ -5,23 +5,26 @@ public class AccountTest extends BaseTest {
 
     private String tabName = "Accounts";
     private String accountName = "AAAAA";
-    private Account account = new Account(accountName,
-            "SSS.tut",
-            "Analyst",
-            "234124123423",
-            "description text",
-            "Banking",
-            "100-200",
-            "billing address text",
-            "shipping address text",
-            "billingCity",
-            "billingZip",
-            "billingState",
-            "billingCountry",
-            "shippingCity",
-            "shippingZip",
-            "shippingState",
-            "shippingCpuntry");
+
+    private Account account = Account.builder()
+            .accountName(accountName)
+            .website("SSS.tut")
+            .type("Analyst")
+            .description("description text")
+            .phone("234124123423")
+            .industry("Banking")
+            .employees("100")
+            .billingCountry("billingCountry")
+            .billingCity("billingCity")
+            .billingState("billingState")
+            .billingStreet("billing address text")
+            .billingZip("billingZip")
+            .shippingCountry("shippingCpuntry")
+            .shippingState("shippingState")
+            .shippingCity("shippingCity")
+            .shippingStreet("shipping address text")
+            .shippingZip("shippingCpuntry")
+            .build();
 
     @Test
     public void createdAccount() {

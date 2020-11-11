@@ -37,7 +37,7 @@ public class NewContactModal extends BasePage {
         new Input(driver, "Suffix").write(contact.getSuffix());
         new InputWithSearch(driver, "Account Name").selectWithSearch(contact.getAccountName());
         new Input(driver, "Title").write(contact.getTitle());
-        new Input(driver, "Email").write(contact.geteMail());
+        new Input(driver, "Email").write(contact.getEMail());
         new Input(driver, "Phone").write(contact.getPhone());
         new Input(driver, "Mobile").write(contact.getMobilePhone());
         new Input(driver, "Department").write(contact.getDepartment());
